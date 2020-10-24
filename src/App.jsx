@@ -23,7 +23,7 @@ const Delete=(id) =>{
 };
 let ob = new Date().getHours();
 let x='';
-if(ob>=12 && ob<12)
+if(ob>=1 && ob<12)
 {
    x="Good Morning!";
 }
@@ -37,13 +37,14 @@ else{
 
   return (
    <>
-<h3 className="greet">Hello Sir, {x} </h3>
+
    <div className="start">
      <div className="main">
+     <h3 className="greet">{x} </h3> <br/> <br/>
+     <h3 className="plan"> What's your plan for today ? </h3> <br/>  <br/>
+      <h2>   <i className="fa fa-check" aria-hidden="true"/>   To Do List&nbsp;&nbsp;</h2>
        <br/>
-       <i className="fa fa-check" aria-hidden="true"/> <h1> To Do List</h1>
-       <br/>
-       <input type="text" placeholder="Add Items" value = {inlist} onChange={cal}/>
+       <input type="text" placeholder="Add a Task" value = {inlist} onChange={cal}/>
        <button onClick={List}> + </button>
     <ol>
       {Item.map(function(val, index){
